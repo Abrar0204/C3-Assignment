@@ -32,7 +32,7 @@ const CoursesContent = () => {
 							<div className="info">
 								<h1>{title}</h1>
 								<p>
-									{description}.{showCollapse(showAll, index)}
+									{description} {showCollapse(showAll, index)}
 								</p>
 							</div>
 						</div>

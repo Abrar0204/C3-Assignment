@@ -18,10 +18,12 @@ const Header = () => {
 				<p>
 					You'll use limited information to make predictions –
 					eliminating the impossible to uncover the truth. This course
-					builds up to some truly mind-bending challenges!Read more
+					builds up to some truly mind-bending challenges!
 				</p>
 
-				<a href="#">View prerequisites and next steps</a>
+				<button className="anchor">
+					View prerequisites and next steps
+				</button>
 			</div>
 			<div className="header-right">
 				<img
@@ -31,12 +33,12 @@ const Header = () => {
 				/>
 				<div className="stats">
 					<div className="stats-1">
-						<h3>36</h3>
+						<h3>37</h3>
 						<p>Interactive quizzes</p>
 					</div>
 					<div className="stats-2">
-						<h3>36</h3>
-						<p>Interactive quizzes</p>
+						<h3>265+</h3>
+						<p>Concepts and Exercises</p>
 					</div>
 				</div>
 				<button>Start Courses</button>

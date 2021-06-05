@@ -1,10 +1,14 @@
 import React from "react";
+import { useHistory } from "react-router";
 
 const CourseCard = ({ course }) => {
-	console.log(course);
 	const { title, description } = course;
+	const history = useHistory();
+	const goToCourse = () => {
+		history.push("/course");
+	};
 	return (
-		<div className="course-card">
+		<div className="course-card" onClick={goToCourse}>
 			<img
 				src="https://ds055uzetaobb.cloudfront.net/brioche/chapter/Warmup_Puzzles-T6zgwD-6TgfYy.png"
 				width="280"

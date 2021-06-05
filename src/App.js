@@ -10,7 +10,7 @@ const App = () => {
 			<Router>
 				<Navbar />
 				<Switch>
-					<Route path="/" component={Courses} />
+					<Route path="/" exact component={Courses} />
 					<Route path="/course" component={Course} />
 				</Switch>
 			</Router>
