@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router";
 
 const SidebarRight = ({ selectedPuzzle, setSelectedPuzzle }) => {
 	const [puzzle2Answer, setPuzzle2Answer] = useState("");
 	const [puzzle6Answer, setPuzzle6Answer] = useState("");
+	const history = useHistory();
 	const handleInput = e => {
 		const { id, name } = e.target;
 		if (name === "puzzle2") {
@@ -182,7 +184,7 @@ const SidebarRight = ({ selectedPuzzle, setSelectedPuzzle }) => {
 					<div className="puzzle-answer-button">
 						<div
 							className="button filled black"
-							onClick={() => changePuzzle("+")}
+							onClick={() => history.push("/")}
 						>
 							Submit
 						</div>
