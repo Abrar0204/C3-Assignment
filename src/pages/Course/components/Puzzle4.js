@@ -72,7 +72,14 @@ const Puzzle4 = ({ setSelectedPuzzle }) => {
 			);
 			setPuzzle4Data(prev => ({
 				unanswered: prev.unanswered.map((item, ind) =>
-					ind === index ? droppedElem : item.name === name ? {} : item
+					(droppedElem.name === "Ace" && ind === 0) ||
+					(droppedElem.name === "King" && ind === 1) ||
+					(droppedElem.name === "Queen" && ind === 2) ||
+					(droppedElem.name === "Jack" && ind === 3)
+						? droppedElem
+						: draggedElem.name === item.name
+						? {}
+						: item
 				),
 				answered: prev.answered.map((item, ind) =>
 					ind === index ? draggedElem : item

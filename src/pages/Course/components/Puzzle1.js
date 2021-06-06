@@ -15,7 +15,7 @@ const Puzzle1 = ({ setSelectedPuzzle }) => {
 			return;
 		}
 		const elem = puzzle1Data.unanswered.find(item => item.name === name);
-		//When card from answered is dropped in answered (exchangin in answered)
+		//When card from answered is dropped in answered (exchaning in answered)
 		if (elem === undefined) {
 			const elem = puzzle1Data.answered.find(item => item.name === name);
 			setPuzzle1Data(prev => ({
@@ -72,7 +72,13 @@ const Puzzle1 = ({ setSelectedPuzzle }) => {
 			);
 			setPuzzle1Data(prev => ({
 				unanswered: prev.unanswered.map((item, ind) =>
-					ind === index ? droppedElem : item.name === name ? {} : item
+					(droppedElem.name === "Joseph" && ind === 0) ||
+					(droppedElem.name === "Kevin" && ind === 1) ||
+					(droppedElem.name === "Nicholas" && ind === 2)
+						? droppedElem
+						: draggedElem.name === item.name
+						? {}
+						: item
 				),
 				answered: prev.answered.map((item, ind) =>
 					ind === index ? draggedElem : item
