@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { puzzle5 } from "../../../data/puzzleData";
-const Puzzle5 = () => {
+const Puzzle5 = ({ setSelectedPuzzle }) => {
 	const [puzzle5Data, setPuzzle5Data] = useState(puzzle5);
 
 	const onDragStart = (e, boy) => {
@@ -185,7 +185,12 @@ const Puzzle5 = () => {
 				</div>
 				<div className="button-group">
 					<div className="button black">Show Explanation</div>
-					<div className="button filled black">Check Answer</div>
+					<div
+						className="button filled black"
+						onClick={() => setSelectedPuzzle(prev => ++prev)}
+					>
+						Check Answer
+					</div>
 				</div>
 			</div>
 		</div>

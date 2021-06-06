@@ -115,14 +115,24 @@ const SidebarRight = ({ selectedPuzzle, setSelectedPuzzle }) => {
 						</div>
 					</div>
 					<div className="puzzle-answer-button">
-						<div className="button filled black">Submit</div>
+						<div
+							className="button filled black"
+							onClick={() => changePuzzle("+")}
+						>
+							Submit
+						</div>
 						<div className="button black">Show Explanation</div>
 					</div>
 				</div>
 			) : selectedPuzzle === 3 ? (
 				<div className="puzzle-quiz">
 					<div className="puzzle-answer-button">
-						<div className="button filled black">Continue</div>
+						<div
+							className="button filled black"
+							onClick={() => changePuzzle("+")}
+						>
+							Continue
+						</div>
 					</div>
 				</div>
 			) : selectedPuzzle === 6 ? (
@@ -170,7 +180,12 @@ const SidebarRight = ({ selectedPuzzle, setSelectedPuzzle }) => {
 						</div>
 					</div>
 					<div className="puzzle-answer-button">
-						<div className="button filled black">Submit</div>
+						<div
+							className="button filled black"
+							onClick={() => changePuzzle("+")}
+						>
+							Submit
+						</div>
 						<div className="button black">Show Explanation</div>
 					</div>
 				</div>

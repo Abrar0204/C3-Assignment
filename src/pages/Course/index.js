@@ -16,15 +16,15 @@ const Course = () => {
 			<SidebarLeft />
 			<div className="content">
 				{selectedPuzzle === 1 ? (
-					<Puzzle1 />
+					<Puzzle1 setSelectedPuzzle={setSelectedPuzzle} />
 				) : selectedPuzzle === 2 ? (
-					<Puzzle2 />
+					<Puzzle2 setSelectedPuzzle={setSelectedPuzzle} />
 				) : selectedPuzzle === 3 ? (
-					<Puzzle3 />
+					<Puzzle3 setSelectedPuzzle={setSelectedPuzzle} />
 				) : selectedPuzzle === 4 ? (
-					<Puzzle4 />
+					<Puzzle4 setSelectedPuzzle={setSelectedPuzzle} />
 				) : selectedPuzzle === 5 ? (
-					<Puzzle5 />
+					<Puzzle5 setSelectedPuzzle={setSelectedPuzzle} />
 				) : (
 					<Puzzle6 />
 				)}
